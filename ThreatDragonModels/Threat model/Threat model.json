@@ -1,6 +1,7 @@
 {
   "summary": {
-    "title": "Threat model"
+    "title": "Threat model",
+    "description": "a DFD STRIDE Threat Model for a simple web application"
   },
   "detail": {
     "contributors": [],
