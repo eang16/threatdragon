@@ -19,8 +19,8 @@
                 "height": 100
               },
               "position": {
-                "x": 336,
-                "y": 132
+                "x": 287,
+                "y": 128
               },
               "angle": 0,
               "id": "cbb1622b-1b37-435a-8061-05ede666b79f",
@@ -31,7 +31,7 @@
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "web service"
+                  "text": "web server\n(UW library\nwebsite)"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -45,22 +45,66 @@
                 "height": 80
               },
               "position": {
-                "x": 34,
-                "y": 142
+                "x": 14,
+                "y": 141
               },
               "angle": 0,
               "id": "dd6d4891-cc48-4184-a53b-32a39a015f30",
               "z": 2,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Spoofing",
+                  "type": "Spoofing",
+                  "mitigation": "authentication (SSH host keys, digital signatures, hashes), use credentials (something you know and have such as password, access card, biometrics)"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "title": "Tampering",
+                  "mitigation": "permissions on operating system and programs, cryptographic methods to protect files (digital signatures, hashes), protect network traffic (SSL, SSH)"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "title": "Repudiation",
+                  "mitigation": "logging, fraud prevention, cryptographic (digital signatures)"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "title": "Information disclosure",
+                  "mitigation": "permissions, cryptography (proper encryption of files and messages),  network encryption (SSL)"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Denial of service",
+                  "type": "Denial of service",
+                  "mitigation": "access control list, high availability design, extra bandwidth, cloud services"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "title": "Elevation of privilege",
+                  "mitigation": "limit attack surface area, defense in depth, authorization (principle of least privilege), permission, role based access controls"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "browser"
+                  "text": "user"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -71,8 +115,8 @@
                 "height": 80
               },
               "position": {
-                "x": 530,
-                "y": 148
+                "x": 720,
+                "y": 143
               },
               "angle": 0,
               "id": "1f3d0f41-1d69-4d6f-b9e9-3c451c1a2c71",
@@ -83,7 +127,7 @@
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "data"
+                  "text": "database file"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -94,49 +138,306 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 283,
-                "y": 31
+                "x": 432,
+                "y": 24
               },
               "target": {
-                "x": 269,
-                "y": 502
+                "x": 437,
+                "y": 489
               },
               "vertices": [
                 {
-                  "x": 281,
-                  "y": 243
-                }
-              ],
-              "id": "970c8880-8695-4d2d-9c45-fdc0313dc6b0",
-              "z": 4,
-              "attrs": {}
-            },
-            {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 499,
-                "y": 29
-              },
-              "target": {
-                "x": 495,
-                "y": 493
-              },
-              "vertices": [
+                  "x": 415,
+                  "y": 104
+                },
                 {
-                  "x": 500,
-                  "y": 276
+                  "x": 409,
+                  "y": 264
                 }
               ],
               "id": "ea4b9fbc-7e55-4036-858c-4c7e1b0345d7",
               "z": 5,
               "attrs": {}
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "cbb1622b-1b37-435a-8061-05ede666b79f"
+              },
+              "target": {
+                "x": 171,
+                "y": 222
+              },
+              "vertices": [
+                {
+                  "x": 243,
+                  "y": 236
+                }
+              ],
+              "id": "0fcb7157-2264-4870-bb1b-496128fa4527",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 7,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 174,
+                "y": 142
+              },
+              "target": {
+                "id": "cbb1622b-1b37-435a-8061-05ede666b79f"
+              },
+              "vertices": [
+                {
+                  "x": 188,
+                  "y": 144
+                }
+              ],
+              "id": "624f5f2e-0ed3-4604-8bc6-fa1649ff8d38",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.600359758983515,
+                    "offset": -3.5687617241889007
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 8,
+              "hasOpenThreats": false,
+              "isEncrypted": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 514,
+                "y": 135
+              },
+              "angle": 0,
+              "id": "f9ef31f6-cb1d-4d0e-9763-31ccc74617de",
+              "z": 9,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "UW library\ndatabse"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 167,
+                "y": 456
+              },
+              "target": {
+                "x": 208,
+                "y": 33
+              },
+              "vertices": [
+                {
+                  "x": 205,
+                  "y": 69
+                }
+              ],
+              "id": "8f70f468-85b4-444d-94d5-6f5cd916fd1a",
+              "z": 11,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "cbb1622b-1b37-435a-8061-05ede666b79f"
+              },
+              "target": {
+                "x": 527,
+                "y": 149
+              },
+              "vertices": [],
+              "id": "84b5a2be-0c5f-466b-b1d1-221d9faa3f35",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "SQL query",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 12,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "f9ef31f6-cb1d-4d0e-9763-31ccc74617de"
+              },
+              "target": {
+                "x": 374,
+                "y": 212
+              },
+              "vertices": [],
+              "id": "2872aa9b-bc79-4f91-82b7-6fde881a8de4",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.4718882346327311,
+                    "offset": -9.290333730191987
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "data",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 13,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 607,
+                "y": 156
+              },
+              "target": {
+                "id": "1f3d0f41-1d69-4d6f-b9e9-3c451c1a2c71"
+              },
+              "vertices": [],
+              "id": "b2dde20c-8989-4dda-b2e0-7aadc353418b",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "data",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 14,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "1f3d0f41-1d69-4d6f-b9e9-3c451c1a2c71"
+              },
+              "target": {
+                "x": 611,
+                "y": 215
+              },
+              "vertices": [],
+              "id": "aa3e3345-dbc4-41d0-895b-c7a3fb5c0ecf",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "data",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 15,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
             }
           ]
         },
         "size": {
           "height": 1394.26220703125,
-          "width": 790
+          "width": 1149
         }
       }
     ]
