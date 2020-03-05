@@ -25,16 +25,26 @@
               "angle": 0,
               "id": "cbb1622b-1b37-435a-8061-05ede666b79f",
               "z": 1,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Elevation of privilege",
+                  "type": "Elevation of privilege",
+                  "description": "User injects Javascript into HTML page",
+                  "mitigation": ""
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "web server\n(UW library\nwebsite)"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -46,7 +56,7 @@
               },
               "position": {
                 "x": 14,
-                "y": 141
+                "y": 142
               },
               "angle": 0,
               "id": "dd6d4891-cc48-4184-a53b-32a39a015f30",
@@ -58,7 +68,8 @@
                   "severity": "Medium",
                   "title": "Spoofing",
                   "type": "Spoofing",
-                  "mitigation": "authentication (SSH host keys, digital signatures, hashes), use credentials (something you know and have such as password, access card, biometrics)"
+                  "mitigation": "authentication (SSH host keys, digital signatures, hashes), use credentials (something you know and have such as password, access card, biometrics)",
+                  "description": "user evades authentication"
                 },
                 {
                   "status": "Open",
@@ -121,16 +132,25 @@
               "angle": 0,
               "id": "1f3d0f41-1d69-4d6f-b9e9-3c451c1a2c71",
               "z": 3,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "title": "Denial of service",
+                  "description": "databases filled up with malicious request"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "database file"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -250,22 +270,31 @@
                 "height": 100
               },
               "position": {
-                "x": 514,
-                "y": 135
+                "x": 517,
+                "y": 134
               },
               "angle": 0,
               "id": "f9ef31f6-cb1d-4d0e-9763-31ccc74617de",
               "z": 9,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "User inject SQL into database",
+                  "type": "Elevation of privilege",
+                  "title": "Elevation of privilege"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "UW library\ndatabse"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -280,12 +309,7 @@
                 "x": 208,
                 "y": 33
               },
-              "vertices": [
-                {
-                  "x": 205,
-                  "y": 69
-                }
-              ],
+              "vertices": [],
               "id": "8f70f468-85b4-444d-94d5-6f5cd916fd1a",
               "z": 11,
               "attrs": {}
