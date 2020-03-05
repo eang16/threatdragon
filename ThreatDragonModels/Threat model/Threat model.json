@@ -34,6 +34,13 @@
                   "type": "Elevation of privilege",
                   "description": "User injects Javascript into HTML page",
                   "mitigation": ""
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Network traffic not encrypted properly; Responses leak sensitive information",
+                  "title": "Information disclosure"
                 }
               ],
               "attrs": {
