@@ -19,7 +19,7 @@
                 "height": 100
               },
               "position": {
-                "x": 287,
+                "x": 288,
                 "y": 128
               },
               "angle": 0,
@@ -30,17 +30,18 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "title": "Elevation of privilege",
-                  "type": "Elevation of privilege",
+                  "title": "Tampering",
+                  "type": "Tampering",
                   "description": "User injects Javascript into HTML page",
-                  "mitigation": ""
+                  "mitigation": "Proper validation of users' inputs and proper encoding of outputs (HTML escape)"
                 },
                 {
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Network traffic not encrypted properly; Responses leak sensitive information",
-                  "title": "Information disclosure"
+                  "title": "Information disclosure",
+                  "mitigation": "Implement proper encryption, SSL"
                 }
               ],
               "attrs": {
@@ -75,7 +76,7 @@
                   "severity": "Medium",
                   "title": "Spoofing",
                   "type": "Spoofing",
-                  "mitigation": "authentication (SSH host keys, digital signatures, hashes), use credentials (something you know and have such as password, access card, biometrics)",
+                  "mitigation": "proper authentication, implement proper password strength control, implement secure password recovery mechanism, transmit password over TLS, multi factor authentication",
                   "description": "user evades authentication"
                 },
                 {
@@ -90,7 +91,8 @@
                   "severity": "Medium",
                   "type": "Repudiation",
                   "title": "Repudiation",
-                  "mitigation": "logging, fraud prevention, cryptographic (digital signatures)"
+                  "mitigation": "Ensure that all password failures are logged and reviewed",
+                  "description": "User brute force username and password"
                 },
                 {
                   "status": "Open",
@@ -146,7 +148,16 @@
                   "severity": "Medium",
                   "type": "Denial of service",
                   "title": "Denial of service",
-                  "description": "databases filled up with malicious request"
+                  "description": "databases filled up with malicious request",
+                  "mitigation": "use Access Control List, filters, quotas"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "title": "Tampering",
+                  "description": "user modify database files",
+                  "mitigation": "permissions"
                 }
               ],
               "attrs": {
@@ -289,8 +300,9 @@
                   "status": "Open",
                   "severity": "Medium",
                   "description": "User inject SQL into database",
-                  "type": "Elevation of privilege",
-                  "title": "Elevation of privilege"
+                  "type": "Tampering",
+                  "title": "Tampering",
+                  "mitigation": "use parameterized query or stored procedures"
                 }
               ],
               "attrs": {
