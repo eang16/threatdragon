@@ -19,7 +19,7 @@
                 "height": 100
               },
               "position": {
-                "x": 287,
+                "x": 286,
                 "y": 128
               },
               "angle": 0,
@@ -63,7 +63,7 @@
                 "height": 80
               },
               "position": {
-                "x": 13,
+                "x": 14,
                 "y": 142
               },
               "angle": 0,
@@ -107,8 +107,8 @@
                 "height": 80
               },
               "position": {
-                "x": 720,
-                "y": 144
+                "x": 549,
+                "y": 141
               },
               "angle": 0,
               "id": "1f3d0f41-1d69-4d6f-b9e9-3c451c1a2c71",
@@ -143,31 +143,6 @@
                   "class": "element-text hasOpenThreats isInScope"
                 }
               }
-            },
-            {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 432,
-                "y": 24
-              },
-              "target": {
-                "x": 437,
-                "y": 489
-              },
-              "vertices": [
-                {
-                  "x": 415,
-                  "y": 104
-                },
-                {
-                  "x": 409,
-                  "y": 264
-                }
-              ],
-              "id": "ea4b9fbc-7e55-4036-858c-4c7e1b0345d7",
-              "z": 5,
-              "attrs": {}
             },
             {
               "type": "tm.Flow",
@@ -254,42 +229,6 @@
               }
             },
             {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 517,
-                "y": 135
-              },
-              "angle": 0,
-              "id": "f9ef31f6-cb1d-4d0e-9763-31ccc74617de",
-              "z": 9,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "User injects malicious SQL statements into database",
-                  "type": "Tampering",
-                  "title": "Tampering",
-                  "mitigation": "use parameterized query or stored procedures"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "UW library\ndatabse"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
@@ -300,7 +239,12 @@
                 "x": 208,
                 "y": 33
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 210,
+                  "y": 123
+                }
+              ],
               "id": "8f70f468-85b4-444d-94d5-6f5cd916fd1a",
               "z": 11,
               "attrs": {}
@@ -310,80 +254,6 @@
               "smooth": true,
               "source": {
                 "id": "cbb1622b-1b37-435a-8061-05ede666b79f"
-              },
-              "target": {
-                "x": 527,
-                "y": 149
-              },
-              "vertices": [],
-              "id": "84b5a2be-0c5f-466b-b1d1-221d9faa3f35",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "SQL query",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 12,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "f9ef31f6-cb1d-4d0e-9763-31ccc74617de"
-              },
-              "target": {
-                "x": 374,
-                "y": 212
-              },
-              "vertices": [],
-              "id": "2872aa9b-bc79-4f91-82b7-6fde881a8de4",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.4718882346327311,
-                    "offset": -9.290333730191987
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "data",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 13,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "x": 607,
-                "y": 156
               },
               "target": {
                 "id": "1f3d0f41-1d69-4d6f-b9e9-3c451c1a2c71"
@@ -420,8 +290,8 @@
                 "id": "1f3d0f41-1d69-4d6f-b9e9-3c451c1a2c71"
               },
               "target": {
-                "x": 611,
-                "y": 215
+                "x": 365,
+                "y": 219
               },
               "vertices": [],
               "id": "aa3e3345-dbc4-41d0-895b-c7a3fb5c0ecf",
@@ -447,6 +317,27 @@
                   "class": "connection hasNoOpenThreats isInScope"
                 }
               }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 453,
+                "y": 60
+              },
+              "target": {
+                "x": 408,
+                "y": 461
+              },
+              "vertices": [
+                {
+                  "x": 442,
+                  "y": 163
+                }
+              ],
+              "id": "4bede46b-bbfc-4892-ae16-d4e58cfae3e8",
+              "z": 16,
+              "attrs": {}
             }
           ]
         },
